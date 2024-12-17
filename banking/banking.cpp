@@ -3,7 +3,8 @@ using namespace std;
 
 void showMenu()
 {
-    cout << "**********MENU**********" << endl;
+    cout << "\n**********MENU**********\n"
+         << endl;
     cout << "1. Check balance\n";
     cout << "2. Deposite \n";
     cout << "3. Withdraw \n";
@@ -14,10 +15,10 @@ void showMenu()
 void simBanking()
 {
     cout << "\n\t---SIMBANKING-----\n";
-    cout << "Eirtel money.";
-    cout << "\nHallo Pesa";
-    cout << "\nTiGo Pesa";
-    cout << "\nCAzam Pesa\n\n";
+    cout << "1. Eirtel money.";
+    cout << "\n2.Hallo Pesa";
+    cout << "\n3. TiGo Pesa";
+    cout << "\n4. Azam Pesa\n\n";
 }
 
 int main()
@@ -55,9 +56,29 @@ int main()
             break;
         case 4:
             simBanking();
+            int x;
+            cout << "Enter your simbanking to transfer money: \n\n";
+            cin >> x;
+
+            switch (x)
+            {
+            case 1:
+                cout << "Your transaction to Eirtel money is successfully \n\n";
+                break;
+            case 2:
+                cout << "Your transaction to HaloPesa is successfully\n\n";
+                break;
+            case 3:
+                cout << "Your transaction to TiGoPesa is Successfully\n\n";
+                break;
+            case 4:
+                cout << "Your transaction to AzamPesa is Successfully\n\n";
+                break;
+            }
+
             break;
         default:
-            cout << "Invalid choice! Try again.";
+            cout << "Invalid choice! Try again.\n";
         }
     } while (option != 5);
 }
